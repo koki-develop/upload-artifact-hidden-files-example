@@ -9,3 +9,13 @@ jobs:
         with:
           name: exclude-hidden-files
           path: dir
+
+  include-hidden-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@main
+        with:
+          name: include-hidden-files
+          path: dir
+          include-hidden-files: true
