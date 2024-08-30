@@ -1,0 +1,11 @@
+on: push
+
+jobs:
+  exclude-hidden-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@main
+        with:
+          name: exclude-hidden-files
+          path: dir
